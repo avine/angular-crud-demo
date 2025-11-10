@@ -1,0 +1,14 @@
+.app-user-form {
+  &__form {
+    margin-top: 2rem;
+  }
+
+  &__field {
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+  }
+}

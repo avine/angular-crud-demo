@@ -1,0 +1,14 @@
+.app-list-users {
+  &__email {
+    word-break: break-all;
+  }
+
+  &__actions {
+    width: 130px;
+    text-align: center !important;
+
+    button + button {
+      margin-left: 0.5rem;
+    }
+  }
+}
