@@ -20,7 +20,7 @@
       Cancel
     </button>
 
-    <button type="submit" matButton="filled" [disabled]="userForm.invalid">
+    <button type="submit" matButton="filled" [disabled]="userForm.invalid || userForm.disabled">
       <mat-icon>check</mat-icon>
       Submit
     </button>

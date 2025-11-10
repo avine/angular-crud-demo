@@ -26,6 +26,8 @@ export class UserForm {
 
   userChange = output<Omit<User, 'id'>>();
 
+  disabled = input(false);
+
   protected userForm = inject(NonNullableFormBuilder).group({
     firstName: ['', [Validators.required]],
     lastName: ['', [Validators.required]],
@@ -38,6 +40,10 @@ export class UserForm {
       if (user) {
         this.userForm.patchValue(user);
       }
+    });
+
+    effect(() => {
+      this.userForm[this.disabled() ? 'disable' : 'enable']();
     });
   }
 
