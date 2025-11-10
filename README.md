@@ -5,6 +5,8 @@ This repository contains two Angular applications, each implementing the use cas
 1. The first implementation relies on a shared `upsert` component for the `add` and `update` users.
 2. The second implementation relies on separate components for the `add` and `update` users.
 
+_There is also an Angular library (`common`) that contains the code common to both implementations._
+
 ## Goal
 
 The goal is to demonstrate that, in this specific use case, applying the _"Single Responsibility"_ principle (SOLID) at an inappropriate level leads to a fragile implementation.

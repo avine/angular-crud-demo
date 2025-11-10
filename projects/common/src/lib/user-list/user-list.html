@@ -1,0 +1,50 @@
+<h1>List users</h1>
+
+<table mat-table [dataSource]="users()">
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef>First name</th>
+    <td mat-cell *matCellDef="let user">{{ user.firstName }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef>Last name</th>
+    <td mat-cell *matCellDef="let user">{{ user.lastName }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let user" class="lib-user-list__email">{{ user.email }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef class="lib-user-list__actions">Actions</th>
+    <td mat-cell *matCellDef="let user" class="lib-user-list__actions">
+      <button
+        matIconButton="outlined"
+        [routerLink]="['/users/update', user.id]"
+        aria-label="Update"
+        matTooltip="Update"
+        matTooltipPosition="left"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
+
+      <button
+        matIconButton="text"
+        (click)="delete(user.id)"
+        aria-label="Delete"
+        matTooltip="Delete"
+        matTooltipPosition="right"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<p>
+  <button matButton="filled" routerLink="/users/add"><mat-icon>add</mat-icon> Add</button>
+</p>

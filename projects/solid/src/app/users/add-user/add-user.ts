@@ -1,10 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, inject, signal, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { ErrorMessage } from '../../error-message/error-message';
-import { UserForm } from '../shared/user-form/user-form';
-import { UserService } from '../shared/user-service';
-import { User } from '../shared/user-types';
+import { ErrorMessage, User, UserForm, UserService } from 'common';
 
 @Component({
   selector: 'app-add-user',

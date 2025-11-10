@@ -1,11 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, inject, input, signal, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { ErrorMessage, User, UserForm, UserService } from 'common';
 import { Observable } from 'rxjs';
-import { ErrorMessage } from '../../shared/error-message/error-message';
-import { UserService } from '../shared/user-service';
-import { User } from '../shared/user-types';
-import { UserForm } from './user-form/user-form';
 
 @Component({
   selector: 'app-upsert-user',

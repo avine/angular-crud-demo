@@ -1,7 +1,7 @@
 <h1>Update user (SOLID)</h1>
 
 @if (errorMessage()) {
-  <app-error-message>{{ errorMessage() }}</app-error-message>
+  <lib-error-message>{{ errorMessage() }}</lib-error-message>
 }
 
-<app-user-form [disabled]="formDisabled()" [user]="user()" (userChange)="submit($event)" />
+<lib-user-form [disabled]="formDisabled()" [user]="user()" (userChange)="submit($event)" />

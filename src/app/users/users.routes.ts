@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
-import { ListUsers } from './list-users/list-users';
-import { listUsersResolver } from './list-users/list-users-resolver';
+import { UserList, userListResolver } from 'common';
 import { updateUserResolver } from './upsert-user/update-user-resolver';
 import { UpsertUser } from './upsert-user/upsert-user';
 
@@ -12,8 +11,8 @@ const routes: Routes = [
   },
   {
     path: 'list',
-    component: ListUsers,
-    resolve: { users: listUsersResolver },
+    component: UserList,
+    resolve: { users: userListResolver },
   },
   {
     path: 'add',
